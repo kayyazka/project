@@ -1,67 +1,202 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
+    background-color: #f4f4f4; /* Background color for the whole page */
 }
 
+/* Profile Container */
 .container {
-    max-width: 900px;
-    margin: 20px auto;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 800px; /* Set a max-width */
+    margin: 2rem auto; /* Center the container */
+    background-color: #fff; /* White background for the CV */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    padding: 1.5rem; /* Padding inside the container */
+    border-radius: 10px; /* Rounded corners */
 }
 
+/* Header Section */
 header {
-    text-align: center;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 20px;
+    background-color: #8a9db7; /* Header background color */
+    color: #fff; /* Text color in the header */
+    padding: 1.5rem; /* Padding for the header */
+    text-align: center; /* Centered text */
+    border-radius: 10px 10px 0 0; /* Rounded corners for the top of the header */
 }
 
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 10px;
-}
-
-h1 {
-    margin: 0;
-    font-size: 2.5em;
-    color: #4CAF50;
-}
-
-p {
-    font-size: 1em;
-    line-height: 1.5;
-}
-
+/* Section Styles */
 section {
-    margin: 20px 0;
+    page-break-inside: avoid; /* Prevents breaking sections when printed */
 }
 
-h2 {
-    color: #4CAF50;
-    border-bottom: 2px solid #4CAF50;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
+/* Profile Picture */
+.profile-pic {
+    width: 150px; /* Width of the profile picture */
+    height: 150px; /* Height of the profile picture */
+    border-radius: 50%; /* Circular profile picture */
+    object-fit: cover; /* Cover the area while preserving aspect ratio */
+    margin-bottom: 1rem; /* Space below the profile picture */
 }
 
-.job, .education-item {
-    margin-bottom: 15px;
+/* Main Heading Styles */
+h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 2.5rem; /* Font size for the main name */
 }
 
+/* Section Margins */
+.about, .experie, .education, .skills, .project, .interests {
+    margin: 2rem 0; /* Space above and below each section */
+}
+
+/* Section Headings */
+section h2 {
+    color: #004aad; /* Main heading color */
+    border-bottom: 2px solid #f4a261; /* Underline with specified color */
+    padding-bottom: 0.5rem; /* Space below the heading */
+}
+
+/* Project Section */
+.project {
+    margin: 2rem 0; /* Space above and below the project section */
+}
+
+.project h2 {
+    color: #004aad; /* Main heading color for project */
+    border-bottom: 2px solid #f4a261; /* Underline for project heading */
+    padding-bottom: 0.5rem; /* Space below the heading */
+}
+
+.project p {
+    color: #555; /* Color for project description text */
+    margin: 1rem 0; /* Margin for paragraph text */
+}
+
+/* Interest Section */
+.interest {
+    margin: 2rem 0; /* Space above and below the project section */
+}
+
+.interest h2 {
+    color: #004aad; /* Main heading color for project */
+    border-bottom: 2px solid #f4a261; /* Underline for project heading */
+    padding-bottom: 0.5rem; /* Space below the heading */
+}
+
+.interest p {
+    color: #555; /* Color for project description text */
+    margin: 1rem 0; /* Margin for paragraph text */
+}
+
+/* Education Section */
+.education {
+    margin: 2rem 0; /* Space above and below the education section */
+}
+
+.education h2 {
+    color: #004aad; /* Main heading color for education */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+.education-item {
+    background-color: #e9ecef; /* Background color for education items */
+    padding: 1rem; /* Padding inside each education item */
+    border-radius: 10px; /* Rounded corners for education items */
+    margin-bottom: 1rem; /* Space below each item */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.education-item h3 {
+    margin: 0; /* Remove default margin for degree titles */
+    color: #333; /* Color for degree titles */
+}
+
+.education-item h4 {
+    margin: 0.5rem 0; /* Space above and below institution and date */
+    color: #555; /* Color for institution and date */
+}
+
+.education-item p {
+    margin: 0; /* Remove default margin for description text */
+    color: #666; /* Color for description text */
+}
+
+/* Job Titles and Companies */
+h3 {
+    color: #333; /* Color for job titles */
+}
+
+h4 {
+    color: #555; /* Color for job company titles */
+    margin-bottom: 0.5rem; /* Space below the company title */
+}
+
+/* List Styles */
 ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: disc; /* Default bullet points for lists */
+    padding-left: 1.5rem; /* Indentation for lists */
 }
 
 ul li {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    margin-bottom: 5px;
-    border-radius: 5px;
+    margin-bottom: 0.5rem; /* Space below list items */
+    color: #555; /* Color for list item text */
+}
+
+/* Skills Section */
+.skills {
+    margin: 2rem 0; /* Space above and below the skills section */
+}
+
+.skills h2 {
+    color: #004aad; /* Main heading color for skills */
+    margin-bottom: 1rem; /* Space below the heading */
+}
+
+.skills ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.skills ul li {
+    background-color: #f0f4f8; /* Light background for skill items */
+    margin-bottom: 0.5rem; /* Space between skill items */
+    padding: 0.5rem; /* Padding inside the skill items */
+    border-radius: 5px; /* Rounded corners for skill items */
+    border: 1px solid #d1d1d1; /* Light border for definition */
+    display: block; /* Block display for skill items */
+}
+
+.skills ul li span {
+    color: #333; /* Color for skill type */
+    font-weight: bold; /* Bold for skill type */
+}
+
+.skills ul li .skills-values {
+    color: #555; /* Color for skill values */
+}
+
+/* Ensure skill type and values are inline */
+.skills ul li span, .skills ul li .skills-values {
+    display: inline; /* Keep both in the same line */
+}
+
+/* Download Button */
+#download-btn {
+    display: block; /* Make button a block element */
+    width: 100%; /* Full width of the container */
+    background-color: #f4a261; /* Background color for button */
+    color: white; /* Text color for button */
+    border: none; /* No border for button */
+    padding: 1rem; /* Padding for button */
+    font-size: 1.2rem; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor for button */
+    border-radius: 5px; /* Rounded corners for button */
+    margin-top: 2rem; /* Space above the button */
+    text-align: center; /* Centered text in the button */
+}
+
+#download-btn:hover {
+    background-color: #e76f51; /* Change background color on hover */
 }
