@@ -4,115 +4,141 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Curriculum Vitae - John Doe</title>
+    <title>Curriculum Vitae - Mediasinau</title>
+    <!-- Font Awesome CDN link for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
 <body>
     <div class="container" id="cv">
-        <header>
-            <img src="profile.jpg" alt="John Doe" class="profile-pic">
-            <h1>John Doe</h1>
-            <p>DevOps Engineer</p>
-            <p>Email: john.doe@example.com | Phone: +123-456-7890</p>
-        </header>
-        
-        <section class="about">
-            <h2>About Me</h2>
-            <p>
-                A results-driven DevOps Engineer with 5+ years of experience in automating and streamlining operations, 
-                building and maintaining cloud infrastructure, and supporting software development pipelines. 
-                Proficient in CI/CD, containerization, and cloud platforms with a focus on scalability and high availability.
-            </p>
-        </section>
+        <div class="cv-content">
+            <div class="left-column">
+                <header>
+                    <img src="profile.jpg" alt="Mediasinau" class="profile-pic">
+                    <h1>Mediasinau</h1>
+                    <p>DevOps Engineer</p>
+                </header>    
 
-        <section class="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Bachelor of Computer Science</h3>
-                <h4>University of Example - 2013 to 2017</h4>
-                <p>Graduated with honors, specializing in software development and system architecture.</p>
+                <section class="about">
+                    <h2><i class="fa-solid fa-circle-user"></i>About Me</h2>
+                    <p>
+                        A results-driven DevOps Engineer with 5+ years of experience in automating and streamlining operations, 
+                        building and maintaining cloud infrastructure, and supporting software development pipelines. 
+                        Proficient in CI/CD, containerization, and cloud platforms with a focus on scalability and high availability.
+                    </p>
+                </section>
+                
+                <section class="contact-info">
+                    <h2><i class="fa-solid fa-address-book"></i>Contact Information</h2>
+                    <p><i class="fas fa-envelope"></i> Email: mediasinau@example.com</p>
+                    <p><i class="fas fa-phone"></i> Phone: +123456</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Address: xxx</p>
+                    <p><i class="fab fa-linkedin"></i> LinkedIn: xxxx</p>
+                </section>
+                
+                <section class="skills">
+                    <h2><i class="fa-solid fa-book"></i>Skills</h2>
+                    <ul>
+                        <li><span><i class="fa-solid fa-square-caret-right"></i> Cloud Platforms:</span> <em> AWS, GCP, Azure</em></li>
+                        <li><span><i class="fa-solid fa-square-caret-right"></i>  CI/CD Tools:</span> <em>Jenkins, GitLab CI, CircleCI</em></li>
+                        <li><span><i class="fa-solid fa-square-caret-right"></i> Containerization:</span> <em>Docker, Kubernetes</em></li>
+                        <li><span><i class="fa-solid fa-square-caret-right"></i> Scripting Languages:</span> <em>Bash, Python, Groovy</em></li>
+                        <li><span><i class="fa-solid fa-square-caret-right"></i> Configuration Management:</span> <em>Ansible, Terraform</em></li>
+                    </ul>
+                </section>
+
+                <section class="certification">
+                    <h2><i class="fa-solid fa-certificate"></i>Certification</h2>
+                    <p>Details about your interests will go here. You can describe various activities and topics you are passionate about.</p>
+                </section>
+
+                <section class="interests">
+                    <h2><i class="fa-solid fa-map"></i>Interests</h2>
+                    <p>Details about your interests will go here. You can describe various activities and topics you are passionate about.</p>
+                </section>
+                
+
+                <section class="ask-for">
+                    <h2>Ask For</h2>
+                    <p>Details about your requests or what you're looking for in your next role.</p>
+                </section>
             </div>
-            <div class="education-item">
-                <h3>Master of Information Technology</h3>
-                <h4>Example University - 2018 to 2020</h4>
-                <p>Focused on cloud computing and data management.</p>
+
+            <div class="right-column">
+                <section class="education">
+                    <h2><i class="fas fa-graduation-cap"></i>Education</h2>
+                    <div class="education-item">
+                        <h3><i class="fas fa-graduation-cap"></i> Bachelor of Computer Science</h3>
+                        <h4>University of Example - 2013 to 2017</h4>
+                        <p>Graduated with honors, specializing in software development and system architecture.</p>
+                    </div>
+                    <div class="education-item">
+                        <h3><i class="fas fa-graduation-cap"></i> Master of Information Technology</h3>
+                        <h4>Example University - 2018 to 2020</h4>
+                        <p>Focused on cloud computing and data management.</p>
+                    </div>
+                    <div class="education-item">
+                        <h3><i class="fas fa-graduation-cap"></i> Certification in DevOps Practices</h3>
+                        <h4>DevOps Institute - 2021</h4>
+                        <p>Completed a comprehensive program covering continuous integration and deployment.</p>
+                    </div>
+                </section>                
+                <section class="experience">
+                    <h2><i class="fa-solid fa-laptop"></i>Work Experience</h2>
+                    <div class="job">
+                        <h3>DevOps Engineer</h3>
+                        <h4>ABC Corp - Jan 2020 to Present</h4>
+                        <ul>
+                            <li><i class="fa-solid fa-caret-right"></i>Architected, built, and maintained a highly scalable cloud infrastructure using AWS services including EC2, S3, RDS, and Lambda.</li>
+                            <li><i class="fa-solid fa-caret-right"></i>Implemented and managed CI/CD pipelines using Jenkins, GitLab CI, and CircleCI to automate deployment processes for microservices-based applications.</li>
+                            <li><i class="fa-solid fa-caret-right"></i>Led migration of monolithic applications to Docker containers and Kubernetes clusters, significantly improving deployment time and scalability.</li>
+                            <li><i class="fa-solid fa-caret-right"></i>Collaborated with development teams to design and implement Infrastructure as Code (IaC) using Terraform and AWS CloudFormation.</li>
+                            <li><i class="fa-solid fa-caret-right"></i>Optimized monitoring and logging solutions using Prometheus, Grafana, and ELK Stack, reducing downtime and improving incident response.</li>
+                        </ul>
+                    </div>
+
+                    <div class="job">
+                        <h3>Junior DevOps Engineer</h3>
+                        <h4>XYZ Ltd. - Jun 2017 to Dec 2019</h4>
+                        <ul>
+                            <li><i class="fa-solid fa-caret-right"></i>Assisted in the deployment and configuration of containerized applications using Docker and Kubernetes, enabling easier development and testing workflows.</li>
+                            <li><i class="fa-solid fa-caret-right"></i>Maintained and monitored build automation and CI/CD pipelines using Jenkins, Ansible, and GitLab CI.</li>
+                            <li><i class="fa-solid fa-caret-right"></i>Automated infrastructure provisioning and configuration management using tools like Ansible, reducing manual processes by 60%.</li>
+                            <li><i class="fa-solid fa-caret-right"></i>Worked closely with developers to ensure that environments were stable and deployments were seamless across multiple staging and production environments.</li>
+                            <li><i class="fa-solid fa-caret-right"></i>Supported the migration of legacy applications to cloud environments, including AWS and GCP, ensuring secure and scalable deployments.</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="project">
+                    <h2><i class="fa-solid fa-bars-progress"></i>Projects</h2>
+                    <p>Details about your projects will go here. You can describe individual projects, their objectives, technologies used, and outcomes.</p>
+                </section>
             </div>
-            <div class="education-item">
-                <h3>Certification in DevOps Practices</h3>
-                <h4>DevOps Institute - 2021</h4>
-                <p>Completed a comprehensive program covering continuous integration and deployment.</p>
-            </div>
-        </section>
-        <section class="experience">
-            <h2>Work Experience</h2>
-            <div class="job">
-                <h3>DevOps Engineer</h3>
-                <h4>ABC Corp - Jan 2020 to Present</h4>
-                <ul>
-                    <li>Architected, built, and maintained a highly scalable cloud infrastructure using AWS services including EC2, S3, RDS, and Lambda.</li>
-                    <li>Implemented and managed CI/CD pipelines using Jenkins, GitLab CI, and CircleCI to automate deployment processes for microservices-based applications.</li>
-                    <li>Led migration of monolithic applications to Docker containers and Kubernetes clusters, significantly improving deployment time and scalability.</li>
-                    <li>Collaborated with development teams to design and implement Infrastructure as Code (IaC) using Terraform and AWS CloudFormation.</li>
-                    <li>Optimized monitoring and logging solutions using Prometheus, Grafana, and ELK Stack, reducing downtime and improving incident response.</li>
-                </ul>
-            </div>
+        </div>
 
-            <div class="job">
-                <h3>Junior DevOps Engineer</h3>
-                <h4>XYZ Ltd. - Jun 2017 to Dec 2019</h4>
-                <ul>
-                    <li>Assisted in the deployment and configuration of containerized applications using Docker and Kubernetes, enabling easier development and testing workflows.</li>
-                    <li>Maintained and monitored build automation and CI/CD pipelines using Jenkins, Ansible, and GitLab CI.</li>
-                    <li>Automated infrastructure provisioning and configuration management using tools like Ansible, reducing manual processes by 60%.</li>
-                    <li>Worked closely with developers to ensure that environments were stable and deployments were seamless across multiple staging and production environments.</li>
-                    <li>Supported the migration of legacy applications to cloud environments, including AWS and GCP, ensuring secure and scalable deployments.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="project">
-            <h2>Project</h2>
-            <p>Details about your projects will go here. You can describe individual projects, their objectives, technologies used, and outcomes.</p>
-        </section>
-
-        <section class="interest">
-            <h2>Interest</h2>
-            <p>Details about your interest will go here. You can describe individual projects, their objectives, technologies used, and outcomes.</p>
-        </section>
-
-        </section>
-        <section class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li><span>Cloud Platforms:</span> <span class="skills-values">AWS, GCP, Azure</span></li>
-                <li><span>CI/CD Tools:</span> <span class="skills-values">Jenkins, GitLab CI, CircleCI</span></li>
-                <li><span>Containerization:</span> <span class="skills-values">Docker, Kubernetes</span></li>
-                <li><span>Infrastructure as Code:</span> <span class="skills-values">Terraform, CloudFormation</span></li>
-                <li><span>Configuration Management:</span> <span class="skills-values">Ansible, Chef</span></li>
-                <li><span>Monitoring and Logging:</span> <span class="skills-values">Prometheus, Grafana, ELK Stack</span></li>
-                <li><span>Version Control:</span> <span class="skills-values">Git, GitHub, Bitbucket</span></li>
-                <li><span>Scripting:</span> <span class="skills-values">Bash, Python</span></li>
-            </ul>
-        </section>
-
+        <button id="download-btn" onclick="downloadCV()">Download CV</button>
     </div>
-
-    <button id="download-btn">Download as PDF</button>
-
+    
     <script>
-        document.getElementById('download-btn').addEventListener('click', function() {
-            var element = document.getElementById('cv');
+        function downloadCV() {
+            const element = document.getElementById('cv');
+            const downloadBtn = document.getElementById('download-btn');
+
+            // Hide the download button
+            downloadBtn.style.display = 'none';
+
+            // Generate the PDF
             html2pdf()
                 .from(element)
-                .set({
-                    margin: 1,
-                    filename: 'cv.pdf',
-                    html2canvas: { scale: 2 },
-                    jsPDF: { orientation: 'portrait', unit: 'in', format: 'letter' }
-                })
-                .save();
-        });
+                .save('John_Doe_CV.pdf')
+                .then(() => {
+                    // Show the download button again after the PDF is generated
+                    downloadBtn.style.display = 'inline-block';
+                });
+        }
+
     </script>
 </body>
 </html>

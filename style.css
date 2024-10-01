@@ -9,13 +9,30 @@ body {
 /* Profile Container */
 .container {
     width: 90%;
-    max-width: 800px; /* Set a max-width */
+    max-width: 1200px; /* Increased max-width for wider layout */
     margin: 2rem auto; /* Center the container */
     background-color: #fff; /* White background for the CV */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
     padding: 1.5rem; /* Padding inside the container */
     border-radius: 10px; /* Rounded corners */
+    display: flex; /* Flex display for layout */
+    flex-direction: column; /* Stack elements vertically */
 }
+
+/* Flex for Left and Right Columns */
+.cv-content {
+    display: flex; /* Flexbox for left and right column layout */
+    justify-content: space-between; /* Space between columns */
+    margin: 1rem 0; /* Margin between content sections */
+}
+
+/* Left and Right Columns */
+.left-column,
+.right-column {
+    flex: 1; /* Equal width for both columns */
+    margin: 0 1rem; /* Margin for separation */
+}
+
 
 /* Header Section */
 header {
@@ -40,15 +57,162 @@ section {
     margin-bottom: 1rem; /* Space below the profile picture */
 }
 
+/* General section styling */
+
+
+
+/* about */
+.about {
+    max-width: 600px; /* Set a maximum width to control line length */
+    margin: 0 auto; /* Center the section */
+}
+
+.about h2 {
+    text-align: left; /* Align heading to the left */
+    margin-bottom: 10px; /* Add some spacing below the heading */
+}
+
+.about h2 i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #004aad; /* Optional: change icon color to match heading */
+}
+
+.about p {
+    text-align: justify; /* Justify text to align both left and right edges */
+    line-height: 1.6; /* Add line spacing for better readability */
+    margin: 0 5px; /* Add some padding/margin for better spacing */
+}
+
+/* end about */
+
+/* contact-info */
+.contact-info h2 i {
+    margin-right: 8px; /* Adjust this value for desired spacing */
+    color: #004aad; /* Optional: change the icon color to match heading */
+}
+/* end contact-info */
+
+/* education */
+.education h2 i {
+    margin-right: 8px; /* Adjust this value for desired spacing */
+    color: #004aad; /* Optional: change the icon color to match heading */
+}
+/* end education */
+
+/* experience */
+.experience h2 i {
+    margin-right: 8px; /* Adjust this value for desired spacing */
+    color: #004aad; /* Optional: change the icon color to match heading */
+}
+/* end experience */
+
+/* interests */
+.interests h2 i {
+    margin-right: 8px; /* Adjust this value for desired spacing */
+    color: #004aad; /* Optional: change the icon color to match heading */
+}
+/* end interests */
+
+/* certification */
+.certification h2 i {
+    margin-right: 8px; /* Adjust this value for desired spacing */
+    color: #004aad; /* Optional: change the icon color to match heading */
+}
+/* end certification */
+
+/* project */
+.project h2 i {
+    margin-right: 8px; /* Adjust this value for desired spacing */
+    color: #004aad; /* Optional: change the icon color to match heading */
+}
+/* end project */
+
+/* job  */
+.job {
+    margin-bottom: 1.5rem; /* Space below each job section */
+}
+
+.job h3 {
+    margin: 0; /* Remove default margin */
+    font-size: 1.5rem; /* Set a larger font size for the job title */
+}
+
+.job h4 {
+    margin: 0.2rem 0 1rem 0; /* Add spacing above and below the company and dates */
+    font-weight: normal; /* Make the font weight normal to differentiate from job title */
+    color: #666; /* Optionally, change the color for better contrast */
+}
+
+.job ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.job ul li {
+    margin-bottom: 0.5rem; /* Space between items */
+    line-height: 1.6; /* Better line spacing for readability */
+    display: flex; /* Use flexbox for alignment */
+    align-items: flex-start; /* Align items to the start for better vertical alignment */
+}
+
+.job ul li i {
+    margin-right: 8px; /* Space between icon and text */
+    color: #040405; /* Change icon color to match heading */
+    font-size: 1.2rem; /* Adjust icon size to match text size */
+    /* Optional: Adjust vertical alignment */
+    position: relative; /* Allow adjustment of vertical position */
+    top: 2px; /* Adjust top position to align better */
+}
+
+
+/* end job  */
+
+/* skills */
+.skills {
+    max-width: 600px; /* Set a maximum width to control line length */
+    margin: 0 auto; /* Center the section */
+}
+
+.skills h2 {
+    text-align: left; /* Align heading to the left */
+    margin-bottom: 10px; /* Add some spacing below the heading */
+    margin-right: 8px;
+}
+
+.skills  h2 i {
+    margin-right: 8px; /* Adjust this value for desired spacing */
+    color: #004aad; /* Optional: change the icon color to match heading */
+}
+
+.skills ul {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.skills ul li {
+    margin-bottom: 1rem; /* Space between items */
+    line-height: 1; /* Better line spacing for readability */
+    display: flex; /* Use flexbox for alignment */
+    align-items: flex-start; /* Align items to the start for better vertical alignment */
+}
+
+.skills ul li span {
+    display: inline-block; /* Allow the span to expand and align properly */
+    margin-right: 8px; /* Space between the icon and the text */
+}
+
+.skills ul li i {
+    color: #040405; /* Change icon color to match heading */
+    font-size: 1.2rem; /* Adjust icon size to match text size */
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* end skills */
+
 /* Main Heading Styles */
 h1 {
     margin: 0; /* Remove default margin */
     font-size: 2.5rem; /* Font size for the main name */
-}
-
-/* Section Margins */
-.about, .experie, .education, .skills, .project, .interests {
-    margin: 2rem 0; /* Space above and below each section */
 }
 
 /* Section Headings */
@@ -56,147 +220,47 @@ section h2 {
     color: #004aad; /* Main heading color */
     border-bottom: 2px solid #f4a261; /* Underline with specified color */
     padding-bottom: 0.5rem; /* Space below the heading */
-}
-
-/* Project Section */
-.project {
-    margin: 2rem 0; /* Space above and below the project section */
-}
-
-.project h2 {
-    color: #004aad; /* Main heading color for project */
-    border-bottom: 2px solid #f4a261; /* Underline for project heading */
-    padding-bottom: 0.5rem; /* Space below the heading */
-}
-
-.project p {
-    color: #555; /* Color for project description text */
-    margin: 1rem 0; /* Margin for paragraph text */
-}
-
-/* Interest Section */
-.interest {
-    margin: 2rem 0; /* Space above and below the project section */
-}
-
-.interest h2 {
-    color: #004aad; /* Main heading color for project */
-    border-bottom: 2px solid #f4a261; /* Underline for project heading */
-    padding-bottom: 0.5rem; /* Space below the heading */
-}
-
-.interest p {
-    color: #555; /* Color for project description text */
-    margin: 1rem 0; /* Margin for paragraph text */
-}
-
-/* Education Section */
-.education {
-    margin: 2rem 0; /* Space above and below the education section */
-}
-
-.education h2 {
-    color: #004aad; /* Main heading color for education */
+    margin-top: 1rem; /* Space above the heading */
     margin-bottom: 1rem; /* Space below the heading */
-}
-
-.education-item {
-    background-color: #e9ecef; /* Background color for education items */
-    padding: 1rem; /* Padding inside each education item */
-    border-radius: 10px; /* Rounded corners for education items */
-    margin-bottom: 1rem; /* Space below each item */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.education-item h3 {
-    margin: 0; /* Remove default margin for degree titles */
-    color: #333; /* Color for degree titles */
-}
-
-.education-item h4 {
-    margin: 0.5rem 0; /* Space above and below institution and date */
-    color: #555; /* Color for institution and date */
-}
-
-.education-item p {
-    margin: 0; /* Remove default margin for description text */
-    color: #666; /* Color for description text */
-}
-
-/* Job Titles and Companies */
-h3 {
-    color: #333; /* Color for job titles */
-}
-
-h4 {
-    color: #555; /* Color for job company titles */
-    margin-bottom: 0.5rem; /* Space below the company title */
 }
 
 /* List Styles */
 ul {
-    list-style-type: disc; /* Default bullet points for lists */
-    padding-left: 1.5rem; /* Indentation for lists */
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
 }
 
-ul li {
-    margin-bottom: 0.5rem; /* Space below list items */
-    color: #555; /* Color for list item text */
-}
-
-/* Skills Section */
-.skills {
-    margin: 2rem 0; /* Space above and below the skills section */
-}
-
-.skills h2 {
-    color: #004aad; /* Main heading color for skills */
-    margin-bottom: 1rem; /* Space below the heading */
-}
-
-.skills ul {
-    list-style-type: none; /* Remove default bullet points */
-    padding: 0; /* Remove default padding */
-}
-
-.skills ul li {
-    background-color: #f0f4f8; /* Light background for skill items */
-    margin-bottom: 0.5rem; /* Space between skill items */
-    padding: 0.5rem; /* Padding inside the skill items */
-    border-radius: 5px; /* Rounded corners for skill items */
-    border: 1px solid #d1d1d1; /* Light border for definition */
-    display: block; /* Block display for skill items */
-}
-
-.skills ul li span {
-    color: #333; /* Color for skill type */
-    font-weight: bold; /* Bold for skill type */
-}
-
-.skills ul li .skills-values {
-    color: #555; /* Color for skill values */
-}
-
-/* Ensure skill type and values are inline */
-.skills ul li span, .skills ul li .skills-values {
-    display: inline; /* Keep both in the same line */
-}
-
-/* Download Button */
+/* Button Styles */
 #download-btn {
-    display: block; /* Make button a block element */
-    width: 100%; /* Full width of the container */
-    background-color: #f4a261; /* Background color for button */
-    color: white; /* Text color for button */
-    border: none; /* No border for button */
-    padding: 1rem; /* Padding for button */
-    font-size: 1.2rem; /* Font size for button text */
-    cursor: pointer; /* Pointer cursor for button */
-    border-radius: 5px; /* Rounded corners for button */
-    margin-top: 2rem; /* Space above the button */
-    text-align: center; /* Centered text in the button */
+    background-color: #2a9d8f; /* Button color */
+    color: #fff; /* Text color */
+    border: none; /* Remove border */
+    padding: 0.75rem 1.5rem; /* Padding for the button */
+    font-size: 1rem; /* Font size for button text */
+    border-radius: 5px; /* Rounded corners for the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+#download-btn {
+    font-size: 12px; /* Adjust font size */
+    padding: 5px 10px; /* Adjust padding for a smaller button */
+    width: 100px; /* Set the width */
+    height: 30px; /* Set the height */
+    background-color: #4CAF50; /* Optional: Set background color */
+    color: white; /* Optional: Set text color */
+    border: none; /* Optional: Remove borders */
+    border-radius: 5px; /* Optional: Round the corners */
+    cursor: pointer; /* Optional: Pointer cursor on hover */
 }
 
 #download-btn:hover {
-    background-color: #e76f51; /* Change background color on hover */
+    background-color: #45a049; /* Optional: Hover effect */
+}
+
+/* Adjustments for print view */
+@media print {
+    #download-btn {
+        display: none; /* Hide button on print */
+    }
 }
