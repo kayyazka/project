@@ -242,7 +242,7 @@ ul {
     transition: background-color 0.3s; /* Smooth transition */
 }
 
-#download-btn {
+#download-btn, #preview-btn {
     font-size: 12px; /* Adjust font size */
     padding: 5px 10px; /* Adjust padding for a smaller button */
     width: 100px; /* Set the width */
@@ -258,9 +258,12 @@ ul {
     background-color: #45a049; /* Optional: Hover effect */
 }
 
+
+
 /* Adjustments for print view */
 @media print {
-    #download-btn {
+    #download-btn,
+    #preview-btn {
         display: none; /* Hide button on print */
     }
 }
