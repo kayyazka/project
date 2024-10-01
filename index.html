@@ -33,18 +33,19 @@
                     <h2><i class="fa-solid fa-address-book"></i>Contact Information</h2>
                     <p><i class="fas fa-envelope"></i> Email: mediasinau@example.com</p>
                     <p><i class="fas fa-phone"></i> Phone: +123456</p>
-                    <p><i class="fas fa-map-marker-alt"></i> Address: xxx</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Address: xxxx</p>
                     <p><i class="fab fa-linkedin"></i> LinkedIn: xxxx</p>
+                    <p><i class="fa-brands fa-github"></i> Github: xxxx</p>
                 </section>
                 
                 <section class="skills">
                     <h2><i class="fa-solid fa-book"></i>Skills</h2>
                     <ul>
-                        <li><span><i class="fa-solid fa-square-caret-right"></i> Cloud Platforms:</span> <em> AWS, GCP, Azure</em></li>
-                        <li><span><i class="fa-solid fa-square-caret-right"></i>  CI/CD Tools:</span> <em>Jenkins, GitLab CI, CircleCI</em></li>
-                        <li><span><i class="fa-solid fa-square-caret-right"></i> Containerization:</span> <em>Docker, Kubernetes</em></li>
-                        <li><span><i class="fa-solid fa-square-caret-right"></i> Scripting Languages:</span> <em>Bash, Python, Groovy</em></li>
-                        <li><span><i class="fa-solid fa-square-caret-right"></i> Configuration Management:</span> <em>Ansible, Terraform</em></li>
+                        <li><i class="fa-solid fa-square-caret-right"></i> Cloud Platforms:  AWS, GCP, Azure</li>
+                        <li><i class="fa-solid fa-square-caret-right"></i>  CI/CD Tools: Jenkins, GitLab CI, CircleCI</li>
+                        <li><i class="fa-solid fa-square-caret-right"></i> Containerization: Docker, Kubernetes</li>
+                        <li><i class="fa-solid fa-square-caret-right"></i> Scripting Languages: Bash, Python, Groovy</li>
+                        <li><i class="fa-solid fa-square-caret-right"></i> Configuration Management: Ansible, Terraform</li>
                     </ul>
                 </section>
 
@@ -117,25 +118,72 @@
                 </section>
             </div>
         </div>
+        
+        <!-- Preview and Download Buttons -->
+        <div class="action-buttons">
+            <button id="preview-btn" onclick="previewCV()">Preview CV</button>
+            <button id="download-btn" onclick="downloadCV()">Download CV</button>
+        </div>
 
-        <button id="download-btn" onclick="downloadCV()">Download CV</button>
+        <!-- Close Preview Button (Hidden Initially) -->
+        <button id="close-preview-btn" style="display: none;" onclick="closePreview()">
+            <i class="fa-solid fa-square-xmark"></i>
+        </button>
+
+        <!-- PDF Preview Section -->
+        <iframe id="pdf-preview" style="width: 100%; height: 500px; display: none;"></iframe>
     </div>
     
     <script>
+        function previewCV() {
+            const element = document.getElementById('cv');
+            const previewFrame = document.getElementById('pdf-preview');
+            const downloadBtn = document.getElementById('download-btn');
+            const closePreviewBtn = document.getElementById('close-preview-btn');
+
+            // Hide the download button and show the preview frame and close button
+            downloadBtn.style.display = 'none';
+            previewFrame.style.display = 'block';
+            closePreviewBtn.style.display = 'inline-block';
+
+            // Generate the PDF and load it in the iframe
+            html2pdf().from(element).outputPdf('datauristring').then(function(pdfDataUri) {
+                previewFrame.src = pdfDataUri;
+            });
+        }
+
+        function closePreview() {
+            const previewFrame = document.getElementById('pdf-preview');
+            const downloadBtn = document.getElementById('download-btn');
+            const closePreviewBtn = document.getElementById('close-preview-btn');
+
+            // Hide the preview frame and close button, show the download button
+            previewFrame.style.display = 'none';
+            closePreviewBtn.style.display = 'none';
+            downloadBtn.style.display = 'inline-block';
+        }
+
+
         function downloadCV() {
             const element = document.getElementById('cv');
             const downloadBtn = document.getElementById('download-btn');
+            const previewFrame = document.getElementById('preview-btn');
+            
 
             // Hide the download button
             downloadBtn.style.display = 'none';
+            previewFrame.style.display = 'none';
+            
 
             // Generate the PDF
             html2pdf()
                 .from(element)
-                .save('John_Doe_CV.pdf')
+                .save('CV.pdf')
                 .then(() => {
                     // Show the download button again after the PDF is generated
                     downloadBtn.style.display = 'inline-block';
+                    previewFrame.style.display = 'inline-block';
+                    
                 });
         }
 
