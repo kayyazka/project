@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4; /* Background color for the whole page */
+    background-color: #17202a; /* Background color for the whole page */
 }
 
 /* Profile Container */
@@ -36,11 +36,11 @@ body {
 
 /* Header Section */
 header {
-    background-color: #8a9db7; /* Header background color */
-    color: #fff; /* Text color in the header */
+    background-color: #e5e8e8; /* Header background color */
+    color: #17202a; /* Text color in the header */
     padding: 1.5rem; /* Padding for the header */
     text-align: center; /* Centered text */
-    border-radius: 10px 10px 0 0; /* Rounded corners for the top of the header */
+    border-radius: 10px; /* Rounded corners for the top of the header */
 }
 
 /* Section Styles */
@@ -146,6 +146,7 @@ section {
 .job ul {
     list-style-type: none; /* Remove bullet points */
     padding: 0; /* Remove default padding */
+    margin: 0; /* Ensure there's no default margin */
 }
 
 .job ul li {
@@ -153,6 +154,7 @@ section {
     line-height: 1.6; /* Better line spacing for readability */
     display: flex; /* Use flexbox for alignment */
     align-items: flex-start; /* Align items to the start for better vertical alignment */
+    justify-content: space-between; /* Space out items within the list */
 }
 
 .job ul li i {
@@ -163,6 +165,7 @@ section {
     position: relative; /* Allow adjustment of vertical position */
     top: 2px; /* Adjust top position to align better */
 }
+
 
 
 /* end job  */
@@ -208,6 +211,52 @@ section {
 }
 
 /* end skills */
+
+/* custom-list */
+.custom-list {
+    list-style: none; /* Remove default list styles */
+    position: relative; /* Establish a positioning context */
+    padding-left: 30px; /* Add space for the line */
+    margin: 0; /* Reset margin for the list */
+    text-align:  justify; /* Center align the text */
+}
+
+.custom-list::before {
+    content: ''; /* Create a line */
+    position: absolute;
+    left: 10px; /* Adjust to control line position */
+    top: 0; /* Start from the top of the list */
+    bottom: 0; /* Extend to the bottom of the list */
+    width: 2px; /* Line thickness */
+    background: #f4a261; /* Line color */
+}
+
+.custom-list li {
+    position: relative; /* Create a positioning context for the circle */
+    padding-left: 25px; /* Space for the dot */
+    margin-bottom: 20px; /* Space between list items */
+}
+
+/* Circle for each list item */
+.custom-list li::before {
+    content: ''; /* Create a circle */
+    position: absolute;
+    left: 6px; /* Align circle with the center of the line */
+    top: 50%; /* Center vertically relative to the list item */
+    transform: translateY(-50%); /* Adjust for perfect vertical centering */
+    width: 10px; /* Circle diameter */
+    height: 10px; /* Circle diameter */
+    background: #f4a261; /* Circle color */
+    border-radius: 50%; /* Make it round */
+}
+
+/* Optional: Remove margin from the last item to avoid extra space */
+.custom-list li:last-child {
+    margin-bottom: 0; /* Remove margin for the last item */
+}
+
+/* end custom-list */
+
 
 /* Main Heading Styles */
 h1 {
@@ -262,8 +311,11 @@ ul {
 
 /* Adjustments for print view */
 @media print {
+
     #download-btn,
     #preview-btn {
         display: none; /* Hide button on print */
     }
 }
+
+

@@ -51,8 +51,11 @@
 
                 <section class="certification">
                     <h2><i class="fa-solid fa-certificate"></i>Certification</h2>
-                    <p>Details about your interests will go here. You can describe various activities and topics you are passionate about.</p>
+                    <p>
+                        I hold several certifications that reflect my dedication to continuous learning and professional development in the field of DevOps and cloud infrastructure. 
+                    </p>
                 </section>
+                
 
                 <section class="interests">
                     <h2><i class="fa-solid fa-map"></i>Interests</h2>
@@ -71,7 +74,7 @@
                     <h2><i class="fas fa-graduation-cap"></i>Education</h2>
                     <div class="education-item">
                         <h3><i class="fas fa-graduation-cap"></i> Bachelor of Computer Science</h3>
-                        <h4>University of Example - 2013 to 2017</h4>
+                        <h4>Example University - 2013 to 2017</h4>
                         <p>Graduated with honors, specializing in software development and system architecture.</p>
                     </div>
                     <div class="education-item">
@@ -79,35 +82,31 @@
                         <h4>Example University - 2018 to 2020</h4>
                         <p>Focused on cloud computing and data management.</p>
                     </div>
-                    <div class="education-item">
-                        <h3><i class="fas fa-graduation-cap"></i> Certification in DevOps Practices</h3>
-                        <h4>DevOps Institute - 2021</h4>
-                        <p>Completed a comprehensive program covering continuous integration and deployment.</p>
-                    </div>
                 </section>                
                 <section class="experience">
                     <h2><i class="fa-solid fa-laptop"></i>Work Experience</h2>
                     <div class="job">
                         <h3>DevOps Engineer</h3>
                         <h4>ABC Corp - Jan 2020 to Present</h4>
-                        <ul>
-                            <li><i class="fa-solid fa-caret-right"></i>Architected, built, and maintained a highly scalable cloud infrastructure using AWS services including EC2, S3, RDS, and Lambda.</li>
-                            <li><i class="fa-solid fa-caret-right"></i>Implemented and managed CI/CD pipelines using Jenkins, GitLab CI, and CircleCI to automate deployment processes for microservices-based applications.</li>
-                            <li><i class="fa-solid fa-caret-right"></i>Led migration of monolithic applications to Docker containers and Kubernetes clusters, significantly improving deployment time and scalability.</li>
-                            <li><i class="fa-solid fa-caret-right"></i>Collaborated with development teams to design and implement Infrastructure as Code (IaC) using Terraform and AWS CloudFormation.</li>
-                            <li><i class="fa-solid fa-caret-right"></i>Optimized monitoring and logging solutions using Prometheus, Grafana, and ELK Stack, reducing downtime and improving incident response.</li>
+                        <ul class="custom-list">
+                            <li>Architected, built, and maintained a highly scalable cloud infrastructure using AWS services including EC2, S3, RDS, and Lambda.</li>
+                            <li>Implemented and managed CI/CD pipelines using Jenkins, GitLab CI, and CircleCI to automate deployment processes for microservices-based applications.</li>
+                            <li>Led migration of monolithic applications to Docker containers and Kubernetes clusters, significantly improving deployment time and scalability.</li>
+                            <li>Collaborated with development teams to design and implement Infrastructure as Code (IaC) using Terraform and AWS CloudFormation.</li>
+                            <li>Optimized monitoring and logging solutions using Prometheus, Grafana, and ELK Stack, reducing downtime and improving incident response.</li>
                         </ul>
+                        
                     </div>
 
                     <div class="job">
                         <h3>Junior DevOps Engineer</h3>
                         <h4>XYZ Ltd. - Jun 2017 to Dec 2019</h4>
-                        <ul>
-                            <li><i class="fa-solid fa-caret-right"></i>Assisted in the deployment and configuration of containerized applications using Docker and Kubernetes, enabling easier development and testing workflows.</li>
-                            <li><i class="fa-solid fa-caret-right"></i>Maintained and monitored build automation and CI/CD pipelines using Jenkins, Ansible, and GitLab CI.</li>
-                            <li><i class="fa-solid fa-caret-right"></i>Automated infrastructure provisioning and configuration management using tools like Ansible, reducing manual processes by 60%.</li>
-                            <li><i class="fa-solid fa-caret-right"></i>Worked closely with developers to ensure that environments were stable and deployments were seamless across multiple staging and production environments.</li>
-                            <li><i class="fa-solid fa-caret-right"></i>Supported the migration of legacy applications to cloud environments, including AWS and GCP, ensuring secure and scalable deployments.</li>
+                        <ul class="custom-list">
+                            <li>Assisted in the deployment and configuration of containerized applications using Docker and Kubernetes, enabling easier development and testing workflows.</li>
+                            <li>Maintained and monitored build automation and CI/CD pipelines using Jenkins, Ansible, and GitLab CI.</li>
+                            <li>Automated infrastructure provisioning and configuration management using tools like Ansible, reducing manual processes by 60%.</li>
+                            <li>Worked closely with developers to ensure that environments were stable and deployments were seamless across multiple staging and production environments.</li>
+                            <li>Supported the migration of legacy applications to cloud environments, including AWS and GCP, ensuring secure and scalable deployments.</li>
                         </ul>
                     </div>
                 </section>
@@ -134,59 +133,55 @@
         <iframe id="pdf-preview" style="width: 100%; height: 500px; display: none;"></iframe>
     </div>
     
-    <script>
-        function previewCV() {
-            const element = document.getElementById('cv');
-            const previewFrame = document.getElementById('pdf-preview');
-            const downloadBtn = document.getElementById('download-btn');
-            const closePreviewBtn = document.getElementById('close-preview-btn');
+<script>
+    function previewCV() {
+        const element = document.getElementById('cv');
+        const previewFrame = document.getElementById('pdf-preview');
+        const downloadBtn = document.getElementById('download-btn');
+        const closePreviewBtn = document.getElementById('close-preview-btn');
 
-            // Hide the download button and show the preview frame and close button
-            downloadBtn.style.display = 'none';
-            previewFrame.style.display = 'block';
-            closePreviewBtn.style.display = 'inline-block';
+        // Hide the download button and show the preview frame and close button
+        downloadBtn.style.display = 'none';
+        previewFrame.style.display = 'block';
+        closePreviewBtn.style.display = 'inline-block';
 
-            // Generate the PDF and load it in the iframe
-            html2pdf().from(element).outputPdf('datauristring').then(function(pdfDataUri) {
-                previewFrame.src = pdfDataUri;
+        // Generate the PDF and load it in the iframe
+        html2pdf().from(element).outputPdf('datauristring').then(function(pdfDataUri) {
+            previewFrame.src = pdfDataUri;
+        });
+    }
+
+    function closePreview() {
+        const previewFrame = document.getElementById('pdf-preview');
+        const downloadBtn = document.getElementById('download-btn');
+        const closePreviewBtn = document.getElementById('close-preview-btn');
+
+        // Hide the preview frame and close button, show the download button
+        previewFrame.style.display = 'none';
+        closePreviewBtn.style.display = 'none';
+        downloadBtn.style.display = 'inline-block';
+    }
+
+    function downloadCV() {
+        const element = document.getElementById('cv');
+        const downloadBtn = document.getElementById('download-btn');
+        const previewBtn = document.getElementById('preview-btn');
+
+        // Hide the download button
+        downloadBtn.style.display = 'none';
+        previewBtn.style.display = 'none';
+
+        // Generate the PDF
+        html2pdf()
+            .from(element)
+            .save('CV.pdf')
+            .then(() => {
+                // Show the download button again after the PDF is generated
+                downloadBtn.style.display = 'inline-block';
+                previewBtn.style.display = 'inline-block';
             });
-        }
+    }
+</script>
 
-        function closePreview() {
-            const previewFrame = document.getElementById('pdf-preview');
-            const downloadBtn = document.getElementById('download-btn');
-            const closePreviewBtn = document.getElementById('close-preview-btn');
-
-            // Hide the preview frame and close button, show the download button
-            previewFrame.style.display = 'none';
-            closePreviewBtn.style.display = 'none';
-            downloadBtn.style.display = 'inline-block';
-        }
-
-
-        function downloadCV() {
-            const element = document.getElementById('cv');
-            const downloadBtn = document.getElementById('download-btn');
-            const previewFrame = document.getElementById('preview-btn');
-            
-
-            // Hide the download button
-            downloadBtn.style.display = 'none';
-            previewFrame.style.display = 'none';
-            
-
-            // Generate the PDF
-            html2pdf()
-                .from(element)
-                .save('CV.pdf')
-                .then(() => {
-                    // Show the download button again after the PDF is generated
-                    downloadBtn.style.display = 'inline-block';
-                    previewFrame.style.display = 'inline-block';
-                    
-                });
-        }
-
-    </script>
 </body>
 </html>
