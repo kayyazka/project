@@ -6,9 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Curriculum Vitae - John Doe</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container" id="cv">
         <header>
             <div class="profile">
                 <img src="profile.jpg" alt="John Doe" class="profile-pic">
@@ -60,5 +61,22 @@
             </ul>
         </section>
     </div>
+
+    <button id="download-btn">Download as PDF</button>
+
+    <script>
+        document.getElementById('download-btn').addEventListener('click', function() {
+            var element = document.getElementById('cv');
+            html2pdf()
+                .from(element)
+                .set({
+                    margin: 1,
+                    filename: 'john_doe_cv.pdf',
+                    html2canvas: { scale: 2 },
+                    jsPDF: { orientation: 'portrait', unit: 'in', format: 'letter' }
+                })
+                .save();
+        });
+    </script>
 </body>
 </html>
