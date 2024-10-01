@@ -11,12 +11,10 @@
 <body>
     <div class="container" id="cv">
         <header>
-            <div class="profile">
-                <img src="image.jpg" alt="John Doe" class="profile-pic">
-                <h1>John Doe</h1>
-                <p>DevOps Engineer</p>
-                <p>Email: john.doe@example.com | Phone: +123-456-7890</p>
-            </div>
+            <img src="profile.jpg" alt="John Doe" class="profile-pic">
+            <h1>John Doe</h1>
+            <p>DevOps Engineer</p>
+            <p>Email: john.doe@example.com | Phone: +123-456-7890</p>
         </header>
         
         <section class="about">
@@ -28,6 +26,24 @@
             </p>
         </section>
 
+        <section class="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Computer Science</h3>
+                <h4>University of Example - 2013 to 2017</h4>
+                <p>Graduated with honors, specializing in software development and system architecture.</p>
+            </div>
+            <div class="education-item">
+                <h3>Master of Information Technology</h3>
+                <h4>Example University - 2018 to 2020</h4>
+                <p>Focused on cloud computing and data management.</p>
+            </div>
+            <div class="education-item">
+                <h3>Certification in DevOps Practices</h3>
+                <h4>DevOps Institute - 2021</h4>
+                <p>Completed a comprehensive program covering continuous integration and deployment.</p>
+            </div>
+        </section>
         <section class="experience">
             <h2>Work Experience</h2>
             <div class="job">
@@ -55,28 +71,31 @@
             </div>
         </section>
 
-        <section class="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <h3>Bachelor of Computer Science</h3>
-                <h4>University of Example - 2013 to 2017</h4>
-                <p>Graduated with honors, specializing in software development and system architecture.</p>
-            </div>
+        <section class="project">
+            <h2>Project</h2>
+            <p>Details about your projects will go here. You can describe individual projects, their objectives, technologies used, and outcomes.</p>
         </section>
 
+        <section class="interest">
+            <h2>Interest</h2>
+            <p>Details about your interest will go here. You can describe individual projects, their objectives, technologies used, and outcomes.</p>
+        </section>
+
+        </section>
         <section class="skills">
             <h2>Skills</h2>
             <ul>
-                <li>Cloud Platforms: AWS, GCP, Azure</li>
-                <li>CI/CD Tools: Jenkins, GitLab CI, CircleCI</li>
-                <li>Containerization: Docker, Kubernetes</li>
-                <li>Infrastructure as Code: Terraform, CloudFormation</li>
-                <li>Configuration Management: Ansible, Chef</li>
-                <li>Monitoring and Logging: Prometheus, Grafana, ELK Stack</li>
-                <li>Version Control: Git, GitHub, Bitbucket</li>
-                <li>Scripting: Bash, Python</li>
+                <li><span>Cloud Platforms:</span> <span class="skills-values">AWS, GCP, Azure</span></li>
+                <li><span>CI/CD Tools:</span> <span class="skills-values">Jenkins, GitLab CI, CircleCI</span></li>
+                <li><span>Containerization:</span> <span class="skills-values">Docker, Kubernetes</span></li>
+                <li><span>Infrastructure as Code:</span> <span class="skills-values">Terraform, CloudFormation</span></li>
+                <li><span>Configuration Management:</span> <span class="skills-values">Ansible, Chef</span></li>
+                <li><span>Monitoring and Logging:</span> <span class="skills-values">Prometheus, Grafana, ELK Stack</span></li>
+                <li><span>Version Control:</span> <span class="skills-values">Git, GitHub, Bitbucket</span></li>
+                <li><span>Scripting:</span> <span class="skills-values">Bash, Python</span></li>
             </ul>
         </section>
+
     </div>
 
     <button id="download-btn">Download as PDF</button>
@@ -88,7 +107,7 @@
                 .from(element)
                 .set({
                     margin: 1,
-                    filename: 'john_doe_cv.pdf',
+                    filename: 'cv.pdf',
                     html2canvas: { scale: 2 },
                     jsPDF: { orientation: 'portrait', unit: 'in', format: 'letter' }
                 })
