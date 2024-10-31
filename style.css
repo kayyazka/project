@@ -216,7 +216,7 @@ section {
 .custom-list {
     list-style: none; /* Remove default list styles */
     position: relative; /* Establish a positioning context */
-    padding-left: 30px; /* Add space for the line */
+    padding: 0px; /* Add space for the line */
     margin: 0; /* Reset margin for the list */
     text-align:  justify; /* Center align the text */
 }
@@ -242,7 +242,7 @@ section {
     content: ''; /* Create a circle */
     position: absolute;
     left: 6px; /* Align circle with the center of the line */
-    top: 50%; /* Center vertically relative to the list item */
+    top: 0%; /* Center vertically relative to the list item */
     transform: translateY(-50%); /* Adjust for perfect vertical centering */
     width: 10px; /* Circle diameter */
     height: 10px; /* Circle diameter */
